@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameBoard
   _ground: {fileID: 1397462781}
+  _tilePrefab: {fileID: 1107621692010325543, guid: 9853960b5c8f65f4982f19d3127d5978, type: 3}
 --- !u!4 &647121641
 Transform:
   m_ObjectHideFlags: 0
@@ -406,6 +407,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Game
   _boardSize: {x: 11, y: 11}
   _board: {fileID: 647121640}
+  _camera: {fileID: 2135651611}
+  _contentFactory: {fileID: 11400000, guid: 3ceb8fe3f6f8e5d4fbcfb331ed6f9697, type: 2}
 --- !u!4 &1933357966
 Transform:
   m_ObjectHideFlags: 0
