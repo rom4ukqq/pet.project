@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -15,12 +16,18 @@ public class Enemy : MonoBehaviour
     private float _directionAngleFrom, _directionAngleTo;
     private float _pathOffset;
     private float _speed;
+    
+    public float Scale { get; private set; }
+    public float Health { get; private set; }
+
 
     public void Initialize(float scale, float pathOffset, float speed)
     {
         _model.localScale = new Vector3(scale, scale, scale);
         _pathOffset = pathOffset;
         _speed = speed;
+        Scale = scale;
+        Health = 100f * scale;
     }
 
     public void SpawnOn(GameTile tile)
@@ -56,6 +63,11 @@ public class Enemy : MonoBehaviour
 
     public bool GameUpdate()
     {
+        if (Health <= 0f)
+        {
+            OriginFactory.Reclaim(this);
+            return false;
+        }
         _progress += Time.deltaTime * _progressFactor;
         while (_progress >= 1f)
         {
@@ -80,6 +92,11 @@ public class Enemy : MonoBehaviour
             transform.localRotation = Quaternion.Euler(0f, angle, 0f);
         }
         return true;
+    }
+
+    public void TakeDamage(float damage)
+    {
+        Health -= damage;
     }
 
     private void PrepareNextState()
