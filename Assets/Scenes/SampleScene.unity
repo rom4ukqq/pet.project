@@ -409,6 +409,8 @@ MonoBehaviour:
   _board: {fileID: 647121640}
   _camera: {fileID: 2135651611}
   _contentFactory: {fileID: 11400000, guid: 3ceb8fe3f6f8e5d4fbcfb331ed6f9697, type: 2}
+  _enemyFactory: {fileID: 11400000, guid: 0a3fc7a6d6c8d324b81ff8fd2efbe1e5, type: 2}
+  _spawnSpeed: 1
 --- !u!4 &1933357966
 Transform:
   m_ObjectHideFlags: 0
