@@ -33,4 +33,9 @@ public enum GameTileContentType
     Tower
 }
 
+public enum TowerType
+{
+    Laser,
+    Mortar
+}
 

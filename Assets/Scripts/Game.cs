@@ -22,6 +22,9 @@ public class Game : MonoBehaviour
     private EnemyCollection _enemies = new EnemyCollection();
 
     private Ray TouchRay => _camera.ScreenPointToRay(Input.mousePosition);
+    
+    private TowerType _currentTowerType;
+    
     private void Start()
     {
         _board.Initialize(_boardSize, _contentFactory);
@@ -29,6 +32,15 @@ public class Game : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            _currentTowerType = TowerType.Laser;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            _currentTowerType = TowerType.Mortar;
+        }
+        
         if (Input.GetMouseButtonDown(0))
         {
             HandleTouch();
@@ -65,7 +77,7 @@ public class Game : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                _board.ToggleTower(tile);
+                _board.ToggleTower(tile, _currentTowerType);
             }
             else
             {
