@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: WarFactory
   m_EditorClassIdentifier: Assembly-CSharp::WarFactory
   _shellPrefab: {fileID: 5860805935258035850, guid: 87e5fe77d68f8444caca1bae45c1c6de, type: 3}
+  _explosionPrefab: {fileID: 5209711411116960340, guid: 0e9313cf6eb899c4a9953c6c3685a3ae, type: 3}

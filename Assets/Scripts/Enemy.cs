@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : GameBehavior
 {
     [SerializeField] private Transform _model;
     
@@ -61,7 +61,7 @@ public class Enemy : MonoBehaviour
         _progressFactor = 2f * _speed;
     }
 
-    public bool GameUpdate()
+    public override bool GameUpdate()
     {
         if (Health <= 0f)
         {

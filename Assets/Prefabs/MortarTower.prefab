@@ -303,6 +303,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MortarTower
   _type: 4
-  _targetingRange: 3
+  _targetingRange: 5
   _shootsPerSeconds: 1
+  _shellBlastRadius: 1
+  _damage: 1
   _mortar: {fileID: 718057430165375258}

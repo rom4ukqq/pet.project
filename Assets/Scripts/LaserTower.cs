@@ -19,9 +19,6 @@ public class LaserTower : Tower
     
     public override void GameUpdate()
     {
-        
-        Debug.Log($"Tower update frame: {Time.frameCount}");
-        
         if (IsTargetTracked(ref _target) || IsAcquireTarget(out _target))
         {
             Shoot();
