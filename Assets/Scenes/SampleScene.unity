@@ -409,9 +409,10 @@ MonoBehaviour:
   _board: {fileID: 647121640}
   _camera: {fileID: 2135651611}
   _contentFactory: {fileID: 11400000, guid: 3ceb8fe3f6f8e5d4fbcfb331ed6f9697, type: 2}
-  _enemyFactory: {fileID: 11400000, guid: 0a3fc7a6d6c8d324b81ff8fd2efbe1e5, type: 2}
-  _spawnSpeed: 1
   _warFactory: {fileID: 11400000, guid: 9ce9d9e7c0d04234daac9bdef94d740b, type: 2}
+  _scenario: {fileID: 11400000, guid: 2a4aa9f6c091b79408e9bd90dd5a26cf, type: 2}
+  _startingPlayerHealth: 30
+  _prepareTime: 10
 --- !u!4 &1933357966
 Transform:
   m_ObjectHideFlags: 0

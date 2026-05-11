@@ -12,13 +12,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c90a2fa92b08e4485c1353793895ea, type: 3}
   m_Name: EnemyFactory
   m_EditorClassIdentifier: Assembly-CSharp::EnemyFactory
-  _prefab: {fileID: 3563378745044380935, guid: 6fa9fb50f0fdfef47a6213b8ed284d2a, type: 3}
-  _scale:
-    _min: 0.86104554
-    _max: 2
-  _pathOffset:
-    _min: -0.012859255
-    _max: 0.25769833
-  _speed:
-    _min: 0.2
-    _max: 0.6379203
+  _small:
+    Prefab: {fileID: 8207610569821999669, guid: b37ede92688095045a40288f25a8fe3a, type: 3}
+    Scale:
+      _min: 0.5
+      _max: 0.75
+    PathOffset:
+      _min: -0.4
+      _max: 0.4
+    Speed:
+      _min: 2
+      _max: 3
+    Health:
+      _min: 100
+      _max: 140
+  _medium:
+    Prefab: {fileID: 286816293164474199, guid: 403085aa7c8cc4d408fdcb7680ff57ae, type: 3}
+    Scale:
+      _min: 1
+      _max: 1
+    PathOffset:
+      _min: 0.1
+      _max: 0.1
+    Speed:
+      _min: 1
+      _max: 1.5
+    Health:
+      _min: 300
+      _max: 500
+  _large:
+    Prefab: {fileID: 3563378745044380935, guid: 6fa9fb50f0fdfef47a6213b8ed284d2a, type: 3}
+    Scale:
+      _min: 2
+      _max: 2
+    PathOffset:
+      _min: 0
+      _max: 0
+    Speed:
+      _min: 0.5
+      _max: 0.75
+    Health:
+      _min: 700
+      _max: 900
