@@ -4,6 +4,8 @@ using UnityEngine;
 public class Enemy : GameBehavior
 {
     [SerializeField] private Transform _model;
+
+    [SerializeField] private EnemyView _view;
     
     public EnemyFactory OriginFactory { get; set; }
 
@@ -28,6 +30,7 @@ public class Enemy : GameBehavior
         _speed = speed;
         Scale = scale;
         Health = health;
+        _view.Init(this);
     }
 
     public void SpawnOn(GameTile tile)
@@ -65,7 +68,8 @@ public class Enemy : GameBehavior
     {
         if (Health <= 0f)
         {
-            Recycle();
+            DisableView();
+            _view.Die();
             return false;
         }
         _progress += Time.deltaTime * _progressFactor;
@@ -158,5 +162,11 @@ public class Enemy : GameBehavior
     public override void Recycle()
     {
         OriginFactory.Reclaim(this);
+    }
+
+    private void DisableView()
+    {
+        _view.GetComponent<Collider>().enabled = false;
+        _view.GetComponent<TargetPoint>().IsEnabled = false;
     }
 }
