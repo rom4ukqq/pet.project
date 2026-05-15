@@ -452,7 +452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89c3dea5f50f86d4c901fbdd895b86da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LaserTower
-  _type: 0
+  _type: 4
   _targetingRange: 2.2
   _damagePerSecond: 24
   _turret: {fileID: 8944813336565407555}

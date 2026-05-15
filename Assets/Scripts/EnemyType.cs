@@ -1,7 +1,7 @@
 ﻿
 public enum EnemyType
 {
-    Large,
-    Medium,
-    Small
+    Grunt,
+    Dragon,
+    Footman
 }

@@ -405,14 +405,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa757f6cf16b29240b4324ac50407c01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Game
-  _boardSize: {x: 11, y: 11}
+  _boardSize: {x: 15, y: 10}
   _board: {fileID: 647121640}
   _camera: {fileID: 2135651611}
   _contentFactory: {fileID: 11400000, guid: 3ceb8fe3f6f8e5d4fbcfb331ed6f9697, type: 2}
   _warFactory: {fileID: 11400000, guid: 9ce9d9e7c0d04234daac9bdef94d740b, type: 2}
   _scenario: {fileID: 11400000, guid: 2a4aa9f6c091b79408e9bd90dd5a26cf, type: 2}
-  _startingPlayerHealth: 30
-  _prepareTime: 10
+  _startingPlayerHealth: 50
+  _prepareTime: 5
 --- !u!4 &1933357966
 Transform:
   m_ObjectHideFlags: 0
@@ -513,13 +513,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2135651609}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 10, z: 0}
+  m_LocalRotation: {x: 0.60876137, y: 0, z: 0, w: 0.7933534}
+  m_LocalPosition: {x: 0, y: 10, z: -3.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 75, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
