@@ -7,7 +7,7 @@ public class LaserTower : Tower
     [SerializeField] private Transform _laserBeam;
 
     private Vector3 _laserBeamScale;
-    
+    private Vector3 _laserBeamStartPosition;
     private TargetPoint _target;
     
     public override TowerType Type => TowerType.Laser;
@@ -15,6 +15,7 @@ public class LaserTower : Tower
     private void Awake()
     {
         _laserBeamScale = _laserBeam.localScale;
+        _laserBeamStartPosition = _laserBeam.localPosition;
     }
     
     public override void GameUpdate()
@@ -38,7 +39,8 @@ public class LaserTower : Tower
         var distance = Vector3.Distance(_turret.position, point);
         _laserBeamScale.z = distance;
         _laserBeam.localScale = _laserBeamScale;
-        _laserBeam.localPosition = _turret.localPosition + 0.5f * distance * _laserBeam.forward;
+        _laserBeam.localPosition = _laserBeamStartPosition
+                                   + 0.5f * distance * _laserBeam.forward;
         
         _target.Enemy.TakeDamage(_damagePerSecond * Time.deltaTime);
     }

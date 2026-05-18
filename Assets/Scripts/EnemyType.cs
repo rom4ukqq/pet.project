@@ -3,5 +3,6 @@ public enum EnemyType
 {
     Grunt,
     Dragon,
-    Footman
+    Footman,
+    Grenadier
 }

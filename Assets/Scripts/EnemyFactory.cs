@@ -15,7 +15,7 @@ public class EnemyFactory : GameObjectFactory
         [FloatRangeSlider(10f, 1000f)] public FloatRange Health = new FloatRange(100f);
     }
 
-    [SerializeField] private EnemyConfig _footman, _dragon, _grunt;
+    [SerializeField] private EnemyConfig _footman, _dragon, _grunt, _grenadier;
     
     public Enemy Get(EnemyType type)
     {
@@ -37,6 +37,8 @@ public class EnemyFactory : GameObjectFactory
                 return _dragon;
             case EnemyType.Footman:
                 return _footman;
+            case EnemyType.Grenadier:
+                return _grenadier;
         }
         Debug.LogError($"No config for {type}");
         return _dragon;
